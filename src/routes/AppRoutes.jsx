@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout";
 import Order from "../pages/Orders/Order";
 import Menu from "../pages/Menu/Menu";
 import History from "../pages/History/History";
-import Login from "../pages/Login/login";
+import Login from "../pages/Login/Login";
 import Register from "../pages/Register/register";
 import ProtectedRoute from "../components/ProtectedRoute"; // Import the ProtectedRoute
 
