@@ -1,7 +1,8 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const BASE_URL = "http://localhost:1001/api";
+// const BASE_URL = "http://localhost:1001/api";
+const BASE_URL = "https://restuarant-backend-ffam.onrender.com/api";
 
 // User Authentication APIs
 export const registerUser = async (userData) => {
