@@ -28,7 +28,7 @@ export const loginUser = async (credentials) => {
 
 export const logoutUser = async (token) => {
   const response = await axios.post(`${BASE_URL}/auth/logout`, {}, {
-    headers: { Authorization: `Bearer ${token}` },
+    headers: { Authorization: `Bearer ${localStorage.getItem("refreshToken")}` },
   });
   return response.data;
 };
@@ -50,7 +50,7 @@ export const addMenuItem = async (data, token) => {
   try {
     const response = await axios.post(`${BASE_URL}/menu/`, data, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${localStorage.getItem("refreshToken")}`,
         "Content-Type": "multipart/form-data", // To handle file uploads
       },
       withCredentials: true, // To send cookies (accessToken, refreshToken)
