@@ -4,7 +4,7 @@ import Order from "../pages/Orders/Order";
 import Menu from "../pages/Menu/Menu";
 import History from "../pages/History/History";
 import Login from "../pages/Login/Login";
-import Register from "../pages/Register/register";
+import Register from "../pages/Register/Register";
 import ProtectedRoute from "../components/ProtectedRoute"; // Import the ProtectedRoute
 
 const AppRoutes = () => {
