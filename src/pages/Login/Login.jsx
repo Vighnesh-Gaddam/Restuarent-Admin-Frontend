@@ -21,15 +21,16 @@ const Login = () => {
       localStorage.setItem("refreshToken", response.data.refreshToken);
 
       // Call the login function from context to update the auth state
-      login();
-
-      toast.success("Login successful!", { position: "top-right" });
+      login();  
 
       setTimeout(() => {
         navigate("/menu"); // Redirect after success
       }, 1500);
+
+      return response;
     } catch (err) {
-      toast.error("Invalid email or password!", { position: "top-right" });
+      const errorMessage = err.response?.data?.message || "Something went wrong!";
+      toast.error(errorMessage, { position: "top-right" });
     }
   };
 
